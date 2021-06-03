@@ -1,0 +1,83 @@
+<div class="card m-b-30">
+  <div class="card-body row">
+    <div class="col-6">
+      <a href=""
+        ><img
+          [src]="employee.imageUrl"
+          alt=""
+          class="img-fluid rounded-circle w-60"
+      /></a>
+    </div>
+    <div class="col-6 card-title align-self-center mb-0">
+      <h5>{{ employee.name }}</h5>
+      <p class="m-0">{{ employee.jobTitle }}</p>
+    </div>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">
+      <fa-icon [icon]="faEnvelope" class="float-right"></fa-icon>Email :
+      <a href="#">{{ employee.email }}</a>
+    </li>
+    <li class="list-group-item">
+      <fa-icon [icon]="faPhoneAlt" class="float-right"></fa-icon>Phone :
+      {{ employee.phone }}
+    </li>
+  </ul>
+  <div class="card-body">
+    <div class="float-right btn-group btn-group-sm">
+      <a
+        href="#"
+        class="btn btn-primary tooltips"
+        data-placement="top"
+        data-toggle="tooltip"
+        data-original-title="Edit"
+        (click)="onOpenUpdateModal()"
+        ><fa-icon [icon]="faPencilAlt"></fa-icon>
+      </a>
+      <a
+        href="#"
+        class="btn btn-secondary tooltips"
+        data-placement="top"
+        data-toggle="tooltip"
+        data-original-title="Delete"
+        (click)="onOpenDeleteModal()"
+        ><fa-icon [icon]="faTimes"></fa-icon
+      ></a>
+    </div>
+    <ul class="social-links list-inline mb-0">
+      <li class="list-inline-item">
+        <a
+          title=""
+          data-placement="top"
+          data-toggle="tooltip"
+          class="tooltips"
+          href=""
+          data-original-title="Facebook"
+          ><fa-icon [icon]="faFacebookF"></fa-icon
+        ></a>
+      </li>
+      <li class="list-inline-item">
+        <a
+          title=""
+          data-placement="top"
+          data-toggle="tooltip"
+          class="tooltips"
+          href=""
+          data-original-title="Twitter"
+          ><fa-icon [icon]="faTwitter"></fa-icon
+        ></a>
+      </li>
+      <li class="list-inline-item">
+        <a
+          title=""
+          data-placement="top"
+          data-toggle="tooltip"
+          class="tooltips"
+          href=""
+          data-original-title="Skype"
+          ><fa-icon [icon]="faSkype"></fa-icon
+        ></a>
+      </li>
+    </ul>
+  </div>
+</div>
